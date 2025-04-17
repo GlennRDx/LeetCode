@@ -1,0 +1,12 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        square = 1
+        root = 0
+        next_odd = 3
+
+        while x >= square:
+            square += next_odd
+            next_odd += 2
+            root += 1
+        
+        return root
